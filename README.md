@@ -48,8 +48,6 @@ O desktop é dedicado exclusivamente ao fluxo de venda, com três telas em sequ�
 
 `usuario` (papel: admin/gerente/atendente) · `categoria` · `produto` · `venda` (com forma de pagamento) · `item_venda`
 
-Script completo: [`schema.sql`](./schema.sql)
-
 ## Escopo da v1
 
 **Incluído:** cadastro de usuários, produtos e categorias · fluxo completo de venda (pedido → confirmação → pagamento) · dashboard de vendas (total, gráfico, produtos mais vendidos)
