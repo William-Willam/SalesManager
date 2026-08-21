@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="tela-pedido" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="br.com.salesmanager.desktop.controller.PedidoController">
+
+    <top>
+        <VBox>
+            <HBox styleClass="topo" alignment="CENTER_LEFT" spacing="12">
+                <padding><Insets top="14" right="20" bottom="14" left="20"/></padding>
+                <Label text="Sales Manager" styleClass="topo-titulo"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="labelAtendente" styleClass="topo-usuario"/>
+                <Button text="Sair" onAction="#onSairClicado" styleClass="botao-secundario"/>
+            </HBox>
+            <ScrollPane fitToHeight="true" styleClass="chips-scroll" hbarPolicy="AS_NEEDED" vbarPolicy="NEVER">
+                <HBox fx:id="listaCategorias" styleClass="chips-categorias" spacing="8" alignment="CENTER_LEFT">
+                    <padding><Insets top="12" right="20" bottom="12" left="20"/></padding>
+                </HBox>
+            </ScrollPane>
+        </VBox>
+    </top>
+
+    <center>
+        <SplitPane dividerPositions="0.72" styleClass="split-principal">
+            <VBox>
+                <HBox fx:id="faixaErro" styleClass="faixa-erro" spacing="12" alignment="CENTER_LEFT"
+                      visible="false" managed="false">
+                    <padding><Insets top="10" right="16" bottom="10" left="16"/></padding>
+                    <Label fx:id="labelErroConexao" styleClass="faixa-erro-texto"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button text="Tentar novamente" onAction="#onTentarNovamenteClicado" styleClass="botao-erro"/>
+                </HBox>
+                <ScrollPane fitToWidth="true" styleClass="area-produtos" VBox.vgrow="ALWAYS">
+                    <FlowPane fx:id="gridProdutos" hgap="14" vgap="14">
+                        <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+                    </FlowPane>
+                </ScrollPane>
+            </VBox>
+
+            <VBox styleClass="carrinho" spacing="0" minWidth="260">
+                <Label text="PEDIDO ATUAL" styleClass="carrinho-titulo">
+                    <padding><Insets top="20" right="20" bottom="12" left="20"/></padding>
+                </Label>
+
+                <StackPane VBox.vgrow="ALWAYS">
+                    <Label fx:id="labelCarrinhoVazio" text="Nenhum item adicionado ainda"
+                           styleClass="carrinho-vazio" visible="false" managed="false"/>
+                    <ListView fx:id="listaItens" styleClass="carrinho-lista"/>
+                </StackPane>
+
+                <VBox styleClass="carrinho-rodape" spacing="12">
+                    <padding><Insets top="16" right="20" bottom="20" left="20"/></padding>
+                    <HBox alignment="CENTER_LEFT">
+                        <Label text="Subtotal" styleClass="carrinho-subtotal-label"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label fx:id="labelTotal" text="R$ 0,00" styleClass="carrinho-total"/>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Button text="Cancelar" onAction="#onCancelarClicado" styleClass="botao-secundario" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                        <Button text="Finalizar" onAction="#onFinalizarClicado" styleClass="botao-primario" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </SplitPane>
+    </center>
+
+</BorderPane>

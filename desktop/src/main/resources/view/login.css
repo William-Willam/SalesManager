@@ -1,0 +1,38 @@
+.tela-login {
+    -fx-background-color: #1e1e2f;
+}
+
+.titulo-login {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 0 0 20 0;
+}
+
+.label-campo {
+    -fx-text-fill: #b0b0c0;
+    -fx-font-size: 12px;
+}
+
+.label-erro {
+    -fx-text-fill: #ff6b6b;
+    -fx-font-size: 12px;
+}
+
+.botao-primario {
+    -fx-background-color: #ff8c00;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 10 0;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+}
+
+.botao-primario:hover {
+    -fx-background-color: #ff9d1f;
+}
+
+.text-field, .password-field {
+    -fx-background-radius: 4;
+    -fx-padding: 8;
+}

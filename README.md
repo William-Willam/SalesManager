@@ -61,6 +61,12 @@ O desktop é dedicado exclusivamente ao fluxo de venda, com três telas em sequ�
 3. Desktop (JavaFX) — login do atendente, tela de pedido, confirmação e pagamento
 4. Web (React) — login, área do administrador, área do gerente (produtos + dashboard)
 
+## Configuração
+
+1. Copie `backend/src/main/resources/application.properties.example` para `application.properties`
+2. Preencha `spring.datasource.username` e `spring.datasource.password` com suas credenciais locais do MySQL
+3. Crie o banco `sales_manager` no MySQL antes de rodar (o Flyway cuida das tabelas)
+
 ## Licença
 
 Definir antes da publicação (ex.: MIT).

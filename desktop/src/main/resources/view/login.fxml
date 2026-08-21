@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="16" styleClass="tela-login"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="br.com.salesmanager.desktop.controller.LoginController">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="SALES MANAGER" styleClass="titulo-login"/>
+
+    <VBox spacing="4" maxWidth="280">
+        <Label text="E-mail" styleClass="label-campo"/>
+        <TextField fx:id="campoEmail" promptText="seu@email.com"/>
+    </VBox>
+
+    <VBox spacing="4" maxWidth="280">
+        <Label text="Senha" styleClass="label-campo"/>
+        <PasswordField fx:id="campoSenha" promptText="••••••••"/>
+    </VBox>
+
+    <Label fx:id="labelErro" styleClass="label-erro" visible="false" managed="false"/>
+
+    <Button fx:id="botaoEntrar" text="ENTRAR" onAction="#onEntrarClicado" maxWidth="280" styleClass="botao-primario"/>
+
+</VBox>

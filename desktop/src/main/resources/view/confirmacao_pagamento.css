@@ -1,0 +1,43 @@
+.modal { -fx-background-color: white; }
+.modal-titulo { -fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1e1e2f; }
+.modal-total { -fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ff8c00; }
+.modal-erro { -fx-text-fill: #e63946; -fx-font-size: 12px; }
+
+.forma-pagamento-botao {
+    -fx-background-color: #f0f0f4;
+    -fx-text-fill: #55556a;
+    -fx-font-weight: bold;
+    -fx-padding: 14 0 14 0;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 14 16 14 16;
+}
+.forma-pagamento-botao:hover { -fx-background-color: #e2e2ea; }
+.forma-pagamento-selecionada {
+    -fx-background-color: #ff8c00;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 14 16 14 16;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.botao-secundario {
+    -fx-background-color: #f0f0f4;
+    -fx-text-fill: #55556a;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 10 0 10 0;
+}
+.botao-primario {
+    -fx-background-color: #ff8c00;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 10 0 10 0;
+}
+.botao-primario:disabled { -fx-opacity: 0.5; -fx-cursor: default; }

@@ -1,0 +1,22 @@
+# Backend (Maven)
+backend/target/
+backend/uploads/
+
+# Desktop (Maven)
+desktop/target/
+
+# Web (Node)
+web/node_modules/
+web/dist/
+
+# Configuração sensível
+backend/src/main/resources/application.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
