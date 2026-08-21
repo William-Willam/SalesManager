@@ -42,9 +42,7 @@ O backend concentra toda a regra de negócio e o acesso ao banco de dados — o 
 
 ### Desktop — Atendente
 
-| Login | Tela de Pedido |
-|---|---|
-| ![Login do desktop](screenshots/desktop-login.png) | ![Tela de pedido](screenshots/desktop-pedido.png) |
+| ![Tela de pedido](screenshots/desktop-pedido.png) |
 
 | Carrinho com fotos dos produtos | Forma de pagamento |
 |---|---|
